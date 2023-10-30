@@ -2,11 +2,13 @@ package linkedListsExample;
 
 import listExample.Employee;
 
-public class EmployeeNode {
-    private Employee employee;
-    private EmployeeNode next;
+public class DoublyNode {
 
-    public EmployeeNode(Employee employee){
+    private Employee employee;
+    private DoublyNode next;
+    private DoublyNode previous;
+
+    public DoublyNode(Employee employee){
         this.employee = employee;
     }
 
@@ -18,12 +20,20 @@ public class EmployeeNode {
         this.employee = employee;
     }
 
-    public EmployeeNode getNext() {
+    public DoublyNode getNext() {
         return next;
     }
 
-    public void setNext(EmployeeNode next) {
+    public void setNext(DoublyNode next) {
         this.next = next;
+    }
+
+    public DoublyNode getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(DoublyNode previous) {
+        this.previous = previous;
     }
 
     public String toString(){

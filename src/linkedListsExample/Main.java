@@ -29,6 +29,41 @@ public class Main {
 
         list.printList();
 
+        System.out.println();
+
+        System.out.println("Doubly Linked List example: ");
+
+        DoublyLinkedList list1 = new DoublyLinkedList();
+
+        list1.addToFront(janeJones);
+        list1.addToFront(johnDoe);
+        list1.addToFront(marySmith);
+        list1.addToFront(mikeWilson);
+
+        list1.printList();
+
+        System.out.println("Size of Doubly Linked List: " + list1.getSize());
+
+        Employee billEnd = new Employee("Bill","End",78);
+
+        list1.addToEnd(billEnd);
+
+        list1.printList();
+
+        System.out.println("Size of Doubly Linked List: " + list1.getSize());
+
+        list1.removeFromFront();
+
+        list1.printList();
+
+        System.out.println("Size of Doubly Linked List: " + list1.getSize());
+
+        list1.removeFromEnd();
+
+        list1.printList();
+
+        System.out.println("Size of Doubly Linked List: " + list1.getSize());
+
     }
 
 }
