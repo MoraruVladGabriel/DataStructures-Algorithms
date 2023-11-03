@@ -64,6 +64,15 @@ public class Main {
 
         System.out.println("Size of Doubly Linked List: " + list1.getSize());
 
+        Employee mimiMan = new Employee("Mimi","Man",1225);
+
+        list1.addBefore(mimiMan, johnDoe);
+
+        list1.printList();
+
+        System.out.println("Size of Doubly Linked List: " + list1.getSize());
+
+
     }
 
 }

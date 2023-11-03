@@ -21,6 +21,28 @@ public class DoublyLinkedList {
         size++;
     }
 
+    public void addBefore(Employee newEmployee, Employee existEmployee) {
+        DoublyNode current = head;
+        DoublyNode newNode = new DoublyNode(newEmployee);
+
+        if (current.getEmployee().equals(existEmployee)) {
+            addToFront(newEmployee);
+        } else {
+            while (current != null) {
+                if (current.getEmployee().equals(existEmployee)){
+                    current.getPrevious().setNext(newNode);
+                    newNode.setPrevious(current.getPrevious());
+                    newNode.setNext(current);
+                    current.setPrevious(newNode);
+
+                }
+                current = current.getNext();
+            }
+        }
+        size++;
+
+    }
+
     public void addToEnd(Employee employee) {
         DoublyNode node = new DoublyNode(employee);
         if (tail == null) {
