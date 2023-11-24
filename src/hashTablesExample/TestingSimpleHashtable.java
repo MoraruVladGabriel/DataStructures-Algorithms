@@ -1,11 +1,8 @@
 package hashTablesExample;
 
-import linkedListsExample.DoublyLinkedList;
-import linkedListsExample.EmployeeLinkedList;
 import listExample.Employee;
 
-public class Main {
-
+public class TestingSimpleHashtable {
     public static void main(String[] args) {
         Employee janeJones = new Employee("Jane", "Jones", 123);
         Employee johnDoe = new Employee("John", "Doe", 4567);
@@ -15,9 +12,9 @@ public class Main {
 
         SimpleHashtable ht = new SimpleHashtable();
         ht.put("Jones", janeJones);
-        ht.put("Doe",johnDoe);
-        ht.put("Wilson",mikeWilson);
-        ht.put("Smith",marySmith);
+        ht.put("Doe", johnDoe);
+        ht.put("Wilson", mikeWilson);
+        ht.put("Smith", marySmith);
 
         ht.printHashtable();
 
